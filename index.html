@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>도미노피자 클론코딩</title>
+
+	<link rel="stylesheet" href="./assets/css/core.min.css">
+
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<header id="header">
+			<div class="container">
+				<div class="system-block">
+
+					<div class="logo">
+						<h1 class="title">
+							<img src="/assets/images/domino.PNG" >
+						</h1>
+					</div>
+
+					<div class="location">
+						<i class="icon"></i>
+						논현로 123길 35-1
+					</div>
+
+					<div class="util">
+						<ul>
+							<li><a href="#">로그인</a></li>
+							<li><a href="#">회원가입</a></li>
+							<li>
+								<select>
+									<option value="kor">KOR</option>
+									<option value="eng">ENG</option>
+								</select>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+
+
+				<div class="gnb-block">
+					<nav class="gnb">
+						<ul>
+							<li><a href="#">메뉴</a></li>
+							<li><a href="#">e-쿠폰</a></li>
+							<li><a href="#">상품권 선물</a></li>
+							<li><a href="#">이벤트 &middot; 제휴</a></li>
+							<li><a href="#">매장검색</a></li>
+						</ul>
+					</nav>
+
+					<div class="view-more">
+						<a href="#">더보기<i class="icon"></i></a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="all-menu">
+			전체메뉴
+		</div>
+
+		<!-- 실제 컨텐츠를 담는 곳 메인은 무조건 1번만 나와야함 -->
+		<main id="main">
+			<section class="sec-mainslider">
+				<div class="swiper-container mainslider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="./assets/images/slider01.jpg" alt="슬라이더 01"></div>
+						<div class="swiper-slide"><img src="./assets/images/slider02.jpg" alt="슬라이더 02"></div>
+					</div>
+				</div>
+
+				<div class="navigation">
+					<button class="arrows prev" arial-label="이전 슬라이더">prev</button><!-- arial-label을 해놓으면 웹접근성 기계가 인식을 함 -->
+					<button class="arrows next" arial-label="다음 슬라이더">next</button>
+				</div>
+
+
+			</section>
+
+			<script>
+				var secSlider = new Swiper('.sec-mainslider .mainslider', {
+					loop: true, // 'true' 이런식으로 넣으면 string 값으로 인식해서 망함
+					slidesPerView: 1,
+					navigation: {
+						nextEl: '.sec-mainslider .next',
+						prevEl: '.sec-mainslider .prev'
+					},
+					on: {	// 슬라이더가 작동하는 이벤트를 체크할 수 있음
+						init: function() {	// 초기화	-> 여기는 초기화된 값이 고정되어서 변하지 않음
+							// console.log(this.slides[this.activeIndex]);	// slides -> 모든 슬라이드들을 가져옴, activeIndex -> active된 인덱스를 가져옴
+						},
+						slideChange: function() {	//슬라이드가 넘어갈때마다 바뀌는 이벤트 -> 슬라이드가 바뀔때마다 값이 변해서 나옴
+							console.log($(this.slides[this.activeIndex]));
+							// console.log(2);
+						}
+					}
+				});
+			</script>
+
+
+		</main>
+
+		<footer id="footer"></footer>
+	</div>
+</body>
+</html>

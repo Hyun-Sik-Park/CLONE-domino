@@ -1,0 +1,42 @@
+.container {
+	margin:0 auto;
+	width: 1200px;
+
+	.system-block {
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	.util {
+
+		ul {
+			width: 200px;
+			display: flex;
+			justify-content: space-between;
+			list-style: none;
+
+			li {
+				a {
+					text-decoration: none;
+					color: #222;
+					font-size: 14px;
+					font-weight: bold;
+				}
+
+
+				select {
+					border:1px solid #989898;
+					border-radius: 15px;
+					height: 30px;
+					outline: none;
+				}
+			}
+		}
+
+	}
+
+	.location{
+
+	}
+}
