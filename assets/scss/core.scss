@@ -1,3 +1,6 @@
+#header{
+	height: 140px;
+}
 .container {
 	margin:0 auto;
 	width: 1200px;
@@ -5,8 +8,86 @@
 	.system-block {
 		display: flex;
 		justify-content: space-between;
-
+		height: 65px;
+		.logo {
+			line-height: 65px;
+		}
+		.location {
+			line-height: 100px;
+		}
+		.util {
+			line-height: 65px;
+		}
 	}
+
+	.gnb-block {
+		display: flex;
+		justify-content: space-between;
+
+		.gnb {
+			ul {
+				display: flex;
+				list-style: none;
+
+				li:first-child {
+					padding:0 65px 0 0;
+				}
+
+				li {
+					padding:0 65px;
+					line-height: 54px;
+
+					a {
+						text-decoration: none;
+						color:#111;
+						font-size: 18px;
+						position: relative;
+					}
+					a::before {
+						content: '';
+						position: absolute;
+						height: 2px;
+						width: 0;
+						bottom: -10px;
+						transition: 0.5s;
+						left: 50%;
+						transform: translateX(-50%);
+						color:#111;
+					}
+					a:hover::before{
+						width:100%;
+						background:#111;
+					}
+				}
+			}
+		}
+		.view-more {
+			line-height: 100px;
+			a {
+				font-size: 18px;
+				text-decoration: none;
+				color: #111;
+				#togglebtn {
+					transition: all 0.25s ease;
+				}
+				#togglebtn.active {
+					transform: rotate(180deg);
+				}
+			}
+		}
+		.toggle-menu{
+			display: none;
+			width: 100%;
+			height: 200px;
+			position: absolute;
+			top: 140px;
+			left: 0;
+			background: #fff;
+			z-index: 200;
+			border-top: 1px solid #f4f4f4;
+		}
+	}
+
 
 	.util {
 
@@ -19,7 +100,7 @@
 			li {
 				a {
 					text-decoration: none;
-					color: #222;
+					color: #111;
 					font-size: 14px;
 					font-weight: bold;
 				}
@@ -37,6 +118,29 @@
 	}
 
 	.location{
+		border-bottom: 1px solid #111;
+		i {
+			color: #989898;
+		}
+		a {
+			text-decoration: none;
+			font-family: Noto Sans;
+			font-size: 14px;
+			font-weight: bold;
+			color:#111;
+		}
+	}
+}
+#main {
+	.sec-mainslider {
+		.swiper-wrapper {
 
+		}
+
+		.navigation {
+			.arrows.prev{
+
+			}
+		}
 	}
 }

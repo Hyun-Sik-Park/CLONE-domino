@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="https://kit.fontawesome.com/61b5fbd6cd.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<div id="wrap">
@@ -25,8 +26,8 @@
 					</div>
 
 					<div class="location">
-						<i class="icon"></i>
-						논현로 123길 35-1
+						<i class="fas fa-location-arrow"></i>
+						<a href="#">주변 매장의 프로모션을 확인해보세요!</a>
 					</div>
 
 					<div class="util">
@@ -57,14 +58,17 @@
 					</nav>
 
 					<div class="view-more">
-						<a href="#">더보기<i class="icon"></i></a>
+						<a href="#">더보기 <i class="fas fa-chevron-down" id="togglebtn"></i></a>
 					</div>
+					<div class="toggle-menu"></div>
 				</div>
+
+
 			</div>
 		</header>
 
 		<div class="all-menu">
-			전체메뉴
+			<!-- 전체메뉴 -->
 		</div>
 
 		<!-- 실제 컨텐츠를 담는 곳 메인은 무조건 1번만 나와야함 -->
@@ -98,10 +102,11 @@
 							// console.log(this.slides[this.activeIndex]);	// slides -> 모든 슬라이드들을 가져옴, activeIndex -> active된 인덱스를 가져옴
 						},
 						slideChange: function() {	//슬라이드가 넘어갈때마다 바뀌는 이벤트 -> 슬라이드가 바뀔때마다 값이 변해서 나옴
-							console.log($(this.slides[this.activeIndex]));
+							console.log(this.slides[this.activeIndex]);
 							// console.log(2);
 						}
 					}
+
 				});
 			</script>
 
@@ -111,4 +116,13 @@
 		<footer id="footer"></footer>
 	</div>
 </body>
+<script>
+	$(document).ready(function(){
+		$('.view-more a').click(function(e){
+			e.preventDefault;
+			$('#togglebtn').toggleClass('active');
+			$('.toggle-menu').slideToggle();
+		});
+	});
+</script>
 </html>
