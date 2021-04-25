@@ -138,8 +138,281 @@
 		}
 
 		.navigation {
-			.arrows.prev{
+			button {
+				width: 0;
+				height: 0;
+				font-size: 0;
+				background: transparent;
+				border: 0;
+			}
+			.arrows.prev::after{
+				content: '';
+				width: 50px;
+				height: 50px;
+				border-top: 1px solid #989898;
+				border-right: 1px solid #989898;
+				transform: rotate(225deg);
+				position: absolute;
+				top: 400px;
+				z-index: 100;
+				left: 50px;
+				cursor: pointer;
+			}
+			.arrows.next::after{
+				content: '';
+				width: 50px;
+				height: 50px;
+				border-top: 1px solid #989898;
+				border-right: 1px solid #989898;
+				transform: rotate(45deg);
+				position: absolute;
+				top: 400px;
+				right: 50px;
+				z-index: 100;
+				cursor: pointer;
+			}
+		}
 
+		.orderWrapper {
+			width: 100%;
+			display: flex;
+			justify-content: space-evenly;
+			padding: 40px 0 80px 0;
+
+			.delivery {
+				cursor: pointer;
+
+				.logo {
+					background: url('../images/order1.PNG') no-repeat;
+					background-size: 50px;
+					width: 50px;
+					height: 50px;
+				}
+				.title {
+					font-size: 42px;
+					color: #ff143c;
+				}
+
+				.subtitle {
+					font-size: 15px;
+					color: #989898;
+					margin-top: 20px;
+				}
+			}
+
+			.takeout {
+				cursor: pointer;
+
+				.logo {
+					background: url('../images/order2.PNG') no-repeat;
+					background-size: 50px;
+					width: 50px;
+					height: 50px;
+				}
+				.title {
+					font-size: 42px;
+					color: #1382ff;
+				}
+
+				.subtitle {
+					font-size: 15px;
+					color: #989898;
+					margin-top: 20px;
+				}
+			}
+
+			.quick {
+				cursor: pointer;
+
+				.logo {
+					background: url('../images/order3.PNG') no-repeat;
+					background-size: 50px;
+					width: 50px;
+					height: 50px;
+				}
+				.title {
+					font-size: 42px;
+					color: #000;
+				}
+
+				.subtitle {
+					font-size: 15px;
+					color: #989898;
+					margin-top: 20px;
+				}
+			}
+		}
+
+
+	}
+	.sec-eventslider {
+
+		.eventWrapper {
+			background: #f6f6f6;
+			display: flex;
+			padding: 100px 200px;
+			position: relative;
+
+			.textWrapper {
+				width: 55%;
+
+				.msg {
+					font-size: 28px;
+					font-weight: 500;
+					color: #000;
+
+					.special {
+						font-weight: 700;
+						color: #238ece;
+					}
+				}
+				button {
+					border: none;
+					background: #333;
+					border-radius: 20px;
+					padding: 10px 20px;
+					margin-top: 30px;
+					cursor: pointer;
+					a {
+						color: #fff;
+						text-decoration: none;
+						display: inline-block;
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+
+			.eventslider {
+				width: 100%;
+			}
+
+			.navigation {
+
+				button {
+					width: 0;
+					height: 0;
+					font-size: 0;
+					background: transparent;
+					border: 0;
+				}
+
+				.arrows.prev::after{
+					content: '';
+					width: 30px;
+					height: 30px;
+					border-top: 1px solid #989898;
+					border-right: 1px solid #989898;
+					transform: rotate(225deg);
+					position: absolute;
+					top: 180px;
+					z-index: 100;
+					left: 530px;
+					cursor: pointer;
+				}
+
+				.arrows.next::after{
+					content: '';
+					width: 30px;
+					height: 30px;
+					border-top: 1px solid #989898;
+					border-right: 1px solid #989898;
+					transform: rotate(45deg);
+					position: absolute;
+					top: 180px;
+					right: 160px;
+					z-index: 100;
+					cursor: pointer;
+				}
+			}
+
+		}
+	}
+	.sec-servicecards {
+		padding: 100px 265px;
+
+		.cardWrapper {
+			display: flex;
+
+			.card01 {
+				width: calc(100% / 3);
+				margin-right: 30px;
+
+				.image {
+					background: url('../images/event01.jpg') no-repeat;
+					background-size: 324px;
+					width: 324px;
+					height: 300px;
+				}
+
+				.textWrapper {
+					border: 1px solid #ccc;
+					border-top: none;
+					padding: 20px 0;
+					.title {
+						font-size: 18px;
+						color: #333;
+						text-align: center;
+					}
+					.subtitle {
+						font-size: 15px;
+						color: #989898;
+						text-align: center;
+					}
+				}
+			}
+			.card02 {
+				width: calc(100% / 3);
+				margin-right: 30px;
+
+				.image {
+					background: url('../images/event02.jpg') no-repeat;
+					background-size: 324px;
+					width: 324px;
+					height: 300px;
+				}
+
+				.textWrapper {
+					border: 1px solid #ccc;
+					border-top: none;
+					padding: 20px 0;
+					.title {
+						font-size: 18px;
+						color: #333;
+						text-align: center;
+					}
+					.subtitle {
+						font-size: 15px;
+						color: #989898;
+						text-align: center;
+					}
+				}
+			}
+			.card03 {
+				width: calc(100% / 3);
+
+				.image {
+					background: url('../images/event03.jpg') no-repeat;
+					background-size: 324px;
+					width: 324px;
+					height: 300px;
+				}
+
+				.textWrapper {
+					border: 1px solid #ccc;
+					border-top: none;
+					padding: 20px 0;
+					.title {
+						font-size: 18px;
+						color: #333;
+						text-align: center;
+					}
+					.subtitle {
+						font-size: 15px;
+						color: #989898;
+						text-align: center;
+					}
+				}
 			}
 		}
 	}
